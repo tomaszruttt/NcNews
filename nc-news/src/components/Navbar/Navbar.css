@@ -2,3 +2,8 @@
   border: orange 4px solid;
   height: 5%;
 }
+.Navbar-link {
+  background-color: rgb(204, 228, 236);
+  /* padding: 3px 10px 30x 10px; */
+  margin: 3px 10px 3px 10px;
+}

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Title from "./components/Title/Title";
 import ArticlesList from "./components/ArticlesList/ArticlesList";
 import { Router } from "@reach/router";
+import IndividualArticle from "./components/IndividualArticle/IndividualArticle";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <Navbar />
       <Router>
         <ArticlesList path="/" />
+        <ArticlesList path="/articles" />
         <ArticlesList path="/articles/topics/:topic" />
+        <IndividualArticle path="/articles/:article_id" />
       </Router>
     </div>
   );

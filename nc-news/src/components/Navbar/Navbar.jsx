@@ -25,7 +25,11 @@ class Navbar extends Component {
       <nav className="Navbar">
         {topics.map(({ slug }) => {
           return (
-            <Link to={`/articles/topics/${slug}`} key={slug}>
+            <Link
+              className="Navbar-link"
+              to={`/articles/topics/${slug}`}
+              key={slug}
+            >
               {slug}
             </Link>
           );
