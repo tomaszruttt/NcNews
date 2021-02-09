@@ -10,8 +10,10 @@ const ArticleCard = ({ title, topic, author, comment_count, article_id }) => {
       </Link>
 
       <p>Topic: {topic}</p>
-      <p>Author: {author}</p>
-      <p>Comments: {comment_count}</p>
+      <p>Posted by {author}</p>
+      <Link to={`/articles/${article_id}`}>
+        <p>{comment_count} Comments</p>
+      </Link>
     </section>
   );
 };

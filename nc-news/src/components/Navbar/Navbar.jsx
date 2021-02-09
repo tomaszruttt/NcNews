@@ -14,7 +14,6 @@ class Navbar extends Component {
 
   fetchTopics() {
     api.getTopics().then((topics) => {
-      console.log(topics);
       this.setState({ topics });
     });
   }
