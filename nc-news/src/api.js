@@ -1,17 +1,18 @@
 import axios from "axios";
 
+const request = axios.create({
+  baseURL: "https://api-tomasz-back-end.herokuapp.com/api",
+});
+
 export const getTopics = () => {
-  return axios
-    .get("https://api-tomasz-back-end.herokuapp.com/api/topics")
-    .then(({ data }) => {
-      return data.topics;
-    });
+  return request.get("/topics").then(({ data }) => {
+    return data.topics;
+  });
 };
 
-export const getArticles = () => {
-  return axios
-    .get("https://api-tomasz-back-end.herokuapp.com/api/articles")
-    .then(({ data }) => {
-      return data.articles;
-    });
+export const getArticles = (topic) => {
+  console.log(topic);
+  return request.get("/articles", { params: { topic } }).then(({ data }) => {
+    return data.articles;
+  });
 };
