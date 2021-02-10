@@ -1,0 +1,18 @@
+.VoteUpdater {
+  background-color: rgb(243, 227, 230);
+  width: 130px;
+  height: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: auto;
+  border-radius: 8px 8px 8px 8px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.VoteUpdater p {
+  font-size: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}

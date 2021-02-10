@@ -7,10 +7,12 @@ class ArticlesList extends Component {
   state = {
     articles: [],
     isLoading: true,
+    identifier: "articles",
   };
 
-  componentDidMount() {
-    this.fetchArticles();
+  componentDidMount(props) {
+    const { topic } = this.props;
+    this.fetchArticles(topic);
   }
 
   componentDidUpdate(prevProps) {
@@ -29,11 +31,19 @@ class ArticlesList extends Component {
   }
 
   render() {
-    const { articles } = this.state;
+    const { articles, identifier } = this.state;
+    console.log(identifier);
+
     return (
       <div className="ArticlesList">
         {articles.map((article) => {
-          return <ArticleCard key={article.article_id} {...article} />;
+          return (
+            <ArticleCard
+              key={article.article_id}
+              identifier={identifier}
+              {...article}
+            />
+          );
         })}
       </div>
     );

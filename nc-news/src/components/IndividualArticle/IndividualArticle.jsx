@@ -3,11 +3,13 @@ import "./IndividualArticle.css";
 import * as api from "../../api";
 import { Link } from "@reach/router";
 import Comments from "../Comments/Comments";
+import VoteUpdater from "../VoteUpdater/VoteUpdater";
 
 class IndividualArticle extends Component {
   state = {
     article: {},
     comments: [],
+    identifier: "articles",
   };
 
   componentDidMount(props) {
@@ -29,19 +31,21 @@ class IndividualArticle extends Component {
   }
 
   render() {
-    const { article, comments } = this.state;
-    console.log(comments);
+    const { article, comments, identifier } = this.state;
+    const { votes, article_id, title, author, body } = article;
+    console.log(identifier);
     return (
       <>
         <section className="IndividualArticle">
-          <h2>{article.title}</h2>
+          <h2>{title}</h2>
           {/* <p>Topic: {article.topic}</p> */}
-          <p>Author: {article.author}</p>
-          <p>{article.body}</p>
+          <p>Author: {author}</p>
+          <p>{body}</p>
           <Link to={`/articles/topics/${article.topic}`}>
             <p>Back</p>
           </Link>
         </section>
+        <VoteUpdater votes={votes} id={article_id} identifier={identifier} />
         <section className="Comments">
           <h3>Comments</h3>
 

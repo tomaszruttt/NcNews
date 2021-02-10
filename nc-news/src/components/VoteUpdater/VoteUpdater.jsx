@@ -1,0 +1,45 @@
+import React, { Component } from "react";
+import "./VoteUpdater.css";
+import * as api from "../../api";
+import { ThumbsupIcon, ThumbsdownIcon } from "@primer/octicons-react";
+
+class VoteUpdater extends Component {
+  state = { voteChange: 0 };
+
+  handleClick = (voteDiff) => {
+    const { id, identifier } = this.props;
+    this.setState((currentState) => {
+      return { voteChange: currentState.voteChange + voteDiff };
+    });
+    api.updateVotes(id, voteDiff, identifier);
+  };
+
+  render() {
+    const { votes } = this.props;
+    const { voteChange } = this.state;
+    console.log(votes);
+    return (
+      <div className="VoteUpdater">
+        <button
+          disabled={voteChange === 1}
+          onClick={() => {
+            this.handleClick(1);
+          }}
+        >
+          <ThumbsupIcon size={16} />
+        </button>
+        <p>{votes + voteChange}</p>
+        <button
+          disabled={voteChange === -1}
+          onClick={() => {
+            this.handleClick(-1);
+          }}
+        >
+          <ThumbsdownIcon size={16} />
+        </button>
+      </div>
+    );
+  }
+}
+
+export default VoteUpdater;

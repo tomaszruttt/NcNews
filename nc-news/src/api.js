@@ -31,3 +31,19 @@ export const getComments = (article_id) => {
     return data.comments;
   });
 };
+
+export const updateVotes = (id, voteChange, identifier) => {
+  console.log(id, voteChange, identifier);
+  return request.patch(`${identifier}/${id}`, { inc_votes: voteChange });
+};
+
+// export const updateVotes = (id, voteChange, identifier) => {
+//   console.log(id, voteChange, identifier);
+//   if (identifier === "article") {
+//     return request.patch(`articles/${id}`, { inc_votes: voteChange });
+//   } else {
+//     return request.patch(`comments/${id}`, { inc_votes: voteChange });
+//   }
+// };
+
+// comments/:comment_id
