@@ -11,6 +11,7 @@ export const getTopics = () => {
 };
 
 export const getArticles = (topic) => {
+  console.log(topic);
   return request.get("/articles", { params: { topic } }).then(({ data }) => {
     return data.articles;
   });

@@ -6,6 +6,7 @@ import { Link } from "@reach/router";
 class Navbar extends Component {
   state = {
     topics: [],
+    isLoading: true,
   };
 
   componentDidMount() {
@@ -14,23 +15,24 @@ class Navbar extends Component {
 
   fetchTopics() {
     api.getTopics().then((topics) => {
-      this.setState({ topics });
+      this.setState({ topics, isLoading: false });
     });
   }
 
   render() {
-    const { topics } = this.state;
+    const { topics, isLoading } = this.state;
+    if (isLoading) {
+      return <p>Loading....</p>;
+    }
     return (
       <nav className="Navbar">
         {topics.map(({ slug }) => {
           return (
-            <Link
-              className="Navbar-link"
-              to={`/articles/topics/${slug}`}
-              key={slug}
-            >
-              {slug}
-            </Link>
+            <button className="Navbar-link">
+              <Link to={`/articles/topics/${slug}`} key={slug}>
+                {slug}
+              </Link>
+            </button>
           );
         })}
       </nav>

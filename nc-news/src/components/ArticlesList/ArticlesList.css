@@ -1,4 +1,5 @@
 .ArticlesList {
-  border: green 4px solid;
-  height: 50%;
+  /* border: green 4px solid; */
+  /* height: 50%; */
+  background-color: rgb(224, 222, 222);
 }

@@ -15,7 +15,9 @@ class ArticlesList extends Component {
 
   componentDidUpdate(prevProps) {
     const { topic } = this.props;
+    console.log(topic, prevProps.topic);
     if (topic !== prevProps.topic) {
+      console.log("different topic found");
       this.fetchArticles(topic);
     }
   }
