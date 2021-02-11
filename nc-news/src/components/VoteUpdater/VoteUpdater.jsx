@@ -26,7 +26,7 @@ class VoteUpdater extends Component {
             this.handleClick(1);
           }}
         >
-          <ThumbsupIcon size={16} />
+          <ThumbsupIcon className="VoteUpdater-thumb-up" size={14} />
         </button>
         <p>{votes + voteChange}</p>
         <button
@@ -35,7 +35,7 @@ class VoteUpdater extends Component {
             this.handleClick(-1);
           }}
         >
-          <ThumbsdownIcon size={16} />
+          <ThumbsdownIcon className="VoteUpdater-thumb-down" size={14} />
         </button>
       </div>
     );

@@ -39,15 +39,21 @@ class IndividualArticle extends Component {
         <section className="IndividualArticle">
           <h2>{title}</h2>
           {/* <p>Topic: {article.topic}</p> */}
-          <p>Author: {author}</p>
-          <p>{body}</p>
-          <Link to={`/articles/topics/${article.topic}`}>
-            <p>Back</p>
-          </Link>
+          <p className="IndArt-author">Posted by: {author}</p>
+          <p className="IndArt-body">{body}</p>
+          <section className="IndArt-buttons">
+            <Link to={`/articles/topics/${article.topic}`}>
+              <button className="IndArt-button">back</button>
+            </Link>
+            <VoteUpdater
+              votes={votes}
+              id={article_id}
+              identifier={identifier}
+            />
+          </section>
         </section>
-        <VoteUpdater votes={votes} id={article_id} identifier={identifier} />
         <section className="Comments">
-          <h3>Comments</h3>
+          <h2>Comments</h2>
 
           {comments.map((comment) => {
             return <Comments key={comments.comment_id} {...comment} />;

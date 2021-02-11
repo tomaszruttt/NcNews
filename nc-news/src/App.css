@@ -1,9 +1,10 @@
 .App {
   text-align: center;
   height: 100vh;
-  border: 5px magenta solid;
+  background-color: #dae0e6;
+  /* border: 5px magenta solid; */
   display: grid;
-  grid-template: 70px 50px 8fr / 1fr;
+  grid-template: 70px 90px 8fr / 1fr;
   grid-template-areas:
     "header"
     "navbar"

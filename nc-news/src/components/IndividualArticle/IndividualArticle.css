@@ -1,0 +1,42 @@
+.IndividualArticle {
+  width: 96%;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 5px 5px 5px;
+  border-radius: 8px 8px 8px 8px;
+  border: 2px solid rgb(149, 148, 148);
+}
+.IndArt-body {
+  /* font-size: 90%; */
+  color: rgb(53, 54, 54);
+}
+.IndArt-button {
+  font-size: 15px;
+  border: none;
+  background-color: rgb(30, 139, 241);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+  width: 80px;
+  border-radius: 6px 6px 6px 6px;
+  text-decoration-line: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.IndArt-button:hover {
+  background-color: rgb(4, 70, 175);
+}
+.IndArt-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  /* justify-content: center; */
+  justify-items: center;
+  align-items: center;
+}
+.IndArt-author {
+  font-size: 70%;
+  padding-right: 75%;
+}
+.Comments h2 {
+  color: black;
+}

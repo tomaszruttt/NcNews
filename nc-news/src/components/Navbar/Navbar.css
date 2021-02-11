@@ -1,23 +1,39 @@
 .Navbar {
-  width: 100%;
+  width: 96%;
   display: flex;
   justify-items: center;
   align-items: center;
   justify-content: center;
-  background-color: rgb(208, 215, 238);
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(208, 215, 238); */
   margin: auto;
   padding-top: 20px;
   padding-bottom: 20px;
-  /* border-radius: 8px 8px 8px 8px; */
+  border-radius: 8px 8px 8px 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   /* border: orange 4px solid; */
 }
-.Navbar-link {
-  text-decoration-line: none;
-  background-color: rgb(235, 228, 228);
-  border-color: rgb(235, 228, 228);
+.Navbar-button {
+  /* text-decoration-line: none; */
+  background-color: rgb(173, 235, 162);
+  /* border-color: rgb(235, 228, 228); */
+  border: none;
   font-size: 16px;
-  padding: 5px 15px 5x 15px;
+  padding: 5px 20px;
   margin: 3px 15px 3px 15px;
-  border-radius: 8px 8px 8px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Navbar-button:hover {
+  background-color: rgb(4, 175, 13);
+}
+
+.Navbar-Link {
+  text-decoration: none;
+  color: black;
+  font-size: 20;
+  font-weight: 700;
 }
