@@ -4,6 +4,7 @@
   background-color: white;
   border-radius: 5px 5px 5px 5px;
   padding-top: 1px;
+
   /* padding-bottom: 1px; */
 }
 .ArticleCard-topic {
@@ -31,4 +32,8 @@
 }
 .ArticleCard-Link:hover {
   color: rgb(4, 71, 255);
+}
+.ArticleCard-comments {
+  padding-bottom: 8px;
+  margin-top: 5px;
 }

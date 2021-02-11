@@ -10,3 +10,9 @@
     "navbar"
     "content";
 }
+
+@media only screen and(min-width: 750px) {
+  .Navbar {
+    width: 80%;
+  }
+}

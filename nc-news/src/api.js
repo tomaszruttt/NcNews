@@ -10,11 +10,13 @@ export const getTopics = () => {
   });
 };
 
-export const getArticles = (topic) => {
-  console.log(topic);
-  return request.get("/articles", { params: { topic } }).then(({ data }) => {
-    return data.articles;
-  });
+export const getArticles = (topic, sortBy, order) => {
+  console.log("from api", topic, sortBy, order);
+  return request
+    .get("/articles", { params: { topic, sort_by: sortBy, order } })
+    .then(({ data }) => {
+      return data.articles;
+    });
 };
 
 export const getIndividualArticle = (article_id) => {

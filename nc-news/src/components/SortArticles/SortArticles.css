@@ -1,0 +1,56 @@
+.SortArticles {
+  width: 96%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(208, 215, 238); */
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px 8px 8px 8px;
+  /* margin-top: 10px; */
+  margin-bottom: 15px;
+}
+
+.SortArticles-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: grey;
+}
+.SortArticles-menu {
+  margin-left: 5px;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(58, 56, 56);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.SortArticles-menu option {
+  font-weight: 600;
+  font-size: 10px;
+}
+.SortArticles-menu:hover {
+  background-color: rgb(186, 207, 235);
+}
+.SortArticles-button {
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgb(186, 207, 235);
+  /* color: white; */
+}
+.SortArticles-button:hover {
+  background-color: rgb(99, 139, 190);
+}

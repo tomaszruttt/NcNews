@@ -22,7 +22,7 @@ const ArticleCard = ({
 
       {/* <p>Posted by {author}</p> */}
       <Link className="ArticleCard-Link" to={`/articles/${article_id}`}>
-        <p>{comment_count} Comments</p>
+        <p className="ArticleCard-comments">{comment_count} Comments</p>
       </Link>
     </section>
   );
