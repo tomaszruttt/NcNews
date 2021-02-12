@@ -9,15 +9,17 @@
   top: 0px;
 }
 
-.element {
+/* .element {
   position: relative;
   top: 20px;
-}
+} */
 
 .Title-h1 {
   color: rgb(63, 27, 247);
   padding-left: 10px;
   font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .Icon {
@@ -50,8 +52,6 @@
 }
 .Title-link {
   text-decoration: none;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
 .Title-h1:hover {

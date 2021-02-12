@@ -3,6 +3,8 @@ import "./ArticlesList.css";
 import ArticleCard from "../ArticleCard/ArticleCard";
 import * as api from "../../api";
 import SortArticles from "../SortArticles/SortArticles";
+// import { Spinner } from "react-awesome-spinners";
+import { SpinnerCircular } from "spinners-react";
 
 class ArticlesList extends Component {
   state = {
@@ -48,11 +50,12 @@ class ArticlesList extends Component {
     this.setState({ order });
   };
   render() {
-    const { articles, identifier } = this.state;
+    const { articles, identifier, isLoading } = this.state;
     console.log(identifier);
 
     return (
       <>
+        {isLoading && <SpinnerCircular />}
         <SortArticles
           sortArticlesBy={this.sortArticlesBy}
           sortByOrder={this.sortByOrder}

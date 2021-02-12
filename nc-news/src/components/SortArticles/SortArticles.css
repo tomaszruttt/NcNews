@@ -12,6 +12,8 @@
   border-radius: 8px 8px 8px 8px;
   /* margin-top: 10px; */
   margin-bottom: 15px;
+  position: sticky;
+  top: 160px;
 }
 
 .SortArticles-label {

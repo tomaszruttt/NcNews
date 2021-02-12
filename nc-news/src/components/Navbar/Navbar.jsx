@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Navbar.css";
 import * as api from "../../api";
 import { Link } from "@reach/router";
-
+import { SpinnerCircular } from "spinners-react";
 class Navbar extends Component {
   state = {
     topics: [],
@@ -21,8 +21,8 @@ class Navbar extends Component {
 
   render() {
     const { topics, isLoading } = this.state;
-    if (isLoading) {
-      return <p>Loading....</p>;
+    {
+      isLoading && <SpinnerCircular />;
     }
     return (
       <nav className="Navbar">

@@ -13,7 +13,8 @@ class SendComment extends Component {
       <form className="SendComment" onSubmit={this.handleSubmit}>
         <label className="SendComment-label">Write: </label>
         <input
-          type="text"
+          rows="5"
+          size="40"
           id="comment"
           onChange={(event) => this.setState({ comment: event.target.value })}
           value={comment}

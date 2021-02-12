@@ -5,12 +5,14 @@ import { Link } from "@reach/router";
 import Comments from "../Comments/Comments";
 import VoteUpdater from "../VoteUpdater/VoteUpdater";
 import SendComment from "../SendComment/SendComment";
+import { SpinnerCircular } from "spinners-react";
 
 class IndividualArticle extends Component {
   state = {
     article: {},
     comments: [],
     identifier: "articles",
+    isLoading: true,
   };
 
   componentDidMount(props) {
@@ -21,7 +23,7 @@ class IndividualArticle extends Component {
 
   fetchIndividualArticle(article_id) {
     api.getIndividualArticle(article_id).then((article) => {
-      this.setState({ article });
+      this.setState({ article, isLoading: false });
     });
   }
 
@@ -37,12 +39,14 @@ class IndividualArticle extends Component {
   };
 
   render() {
-    const { article, comments, identifier } = this.state;
+    const { article, comments, identifier, isLoading } = this.state;
     const { votes, article_id, title, author, body } = article;
     const { username } = this.props;
     console.log(username);
     return (
       <>
+        {isLoading && <SpinnerCircular />}
+
         <section className="IndividualArticle">
           <h2>{title}</h2>
           {/* <p>Topic: {article.topic}</p> */}
