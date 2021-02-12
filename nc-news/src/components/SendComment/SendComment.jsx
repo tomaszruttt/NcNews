@@ -5,6 +5,7 @@ import * as api from "../../api";
 class SendComment extends Component {
   state = {
     comment: "",
+    hidden: false,
   };
   render() {
     const { comment } = this.state;
@@ -24,6 +25,9 @@ class SendComment extends Component {
         >
           Post Comment
         </button>
+        {this.state.hidden && (
+          <p className="SendComment-warning">Please fill !</p>
+        )}
       </form>
     );
   }
@@ -33,14 +37,19 @@ class SendComment extends Component {
     const { comment } = this.state;
     const { article_id, addComment, username } = this.props;
     // const username = "weegembump";
-    console.log(comment, article_id, username);
-    api
-      .postComment(article_id, username, comment)
-      .then((comment) => {
-        addComment(comment);
-        this.setState({ comment: "" });
-      })
-      .catch(console.log);
+    // console.log(comment, article_id, username);
+    if (comment.length) {
+      api
+        .postComment(article_id, username, comment)
+        .then((comment) => {
+          addComment(comment);
+          this.setState({ comment: "", hidden: false });
+        })
+        .catch(console.log);
+    } else
+      this.setState(() => {
+        return { hidden: true };
+      });
   };
 }
 

@@ -31,3 +31,8 @@
 .SendComment-button:hover {
   background-color: rgb(30, 139, 241);
 }
+.SendComment-warning {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}

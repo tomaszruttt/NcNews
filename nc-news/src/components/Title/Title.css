@@ -48,3 +48,12 @@
 .Title-button:hover {
   background-color: rgb(43, 20, 160);
 }
+.Title-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Title-h1:hover {
+  color: rgb(146, 187, 241);
+}
