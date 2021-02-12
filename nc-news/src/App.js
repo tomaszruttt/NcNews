@@ -19,14 +19,20 @@ class App extends Component {
     return (
       <div className="App">
         <Title username={username} logout={this.logout} />
-        <Navbar />
-        <Router>
-          <ArticlesList path="/" />
-          <ArticlesList path="/articles" />
-          <ArticlesList path="/articles/topics/:topic" />
-          <IndividualArticle username={username} path="/articles/:article_id" />
-          <IndividualArticle path="/articles/:article_id/comments" />
-        </Router>
+
+        <body className="Body">
+          <Navbar />
+          <Router>
+            <ArticlesList path="/" />
+            <ArticlesList path="/articles" />
+            <ArticlesList path="/articles/topics/:topic" />
+            <IndividualArticle
+              username={username}
+              path="/articles/:article_id"
+            />
+            <IndividualArticle path="/articles/:article_id/comments" />
+          </Router>
+        </body>
       </div>
     );
   }

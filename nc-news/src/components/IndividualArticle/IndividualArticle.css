@@ -40,28 +40,3 @@
 .Comments h2 {
   color: black;
 }
-@media only screen and (min-width: 780px), (min-device-width: 780px) {
-  .IndividualArticle {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 1080px), (min-device-width: 1080px) {
-  .IndividualArticle {
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 1380px), (min-device-width: 1380px) {
-  .IndividualArticle {
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 1680px), (min-device-width: 1680px) {
-  .IndividualArticle {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1800px), (min-device-width: 1800px) {
-  .IndividualArticle {
-    width: 43%;
-  }
-}

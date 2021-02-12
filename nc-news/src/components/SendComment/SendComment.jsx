@@ -10,7 +10,7 @@ class SendComment extends Component {
     const { comment } = this.state;
     return (
       <form className="SendComment" onSubmit={this.handleSubmit}>
-        <label htmlFor="comment">Write a comment: </label>
+        <label className="SendComment-label">Write: </label>
         <input
           type="text"
           id="comment"
@@ -18,11 +18,11 @@ class SendComment extends Component {
           value={comment}
         />
         <button
-          className="SendComment-Title"
+          className="SendComment-button"
           disabled={!this.props.username}
           type="submit"
         >
-          Send Comment
+          Post Comment
         </button>
       </form>
     );

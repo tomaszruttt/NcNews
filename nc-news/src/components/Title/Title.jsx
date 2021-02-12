@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "@reach/router";
 import "./Title.css";
 import { SquirrelIcon, PersonIcon } from "@primer/octicons-react";
 
 const Title = ({ username, logout }) => {
   return (
     <header className="Title">
+      {/* <Link></Link> */}
       <SquirrelIcon size={40} className="Icon" />
       <h1 className="Title-h1">NC News</h1>
       {username && (

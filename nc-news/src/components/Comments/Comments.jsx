@@ -5,7 +5,6 @@ import "./Comments.css";
 const Comments = ({ votes, created_at, author, body, comment_id }) => {
   return (
     <section className="Comments">
-      {/* <p className="Comments-author">Commented by: {author}</p> */}
       <p className="Comments-date-author">
         Commented by: {author} on {created_at.slice(0, 10)} at{" "}
         {created_at.slice(11, 16)}{" "}

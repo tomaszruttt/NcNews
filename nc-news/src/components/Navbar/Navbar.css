@@ -37,29 +37,3 @@
   font-size: 20;
   font-weight: 700;
 }
-
-@media only screen and (min-width: 780px), (min-device-width: 780px) {
-  .Navbar {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 1080px), (min-device-width: 1080px) {
-  .Navbar {
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 1380px), (min-device-width: 1380px) {
-  .Navbar {
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 1680px), (min-device-width: 1680px) {
-  .Navbar {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1800px), (min-device-width: 1800px) {
-  .Navbar {
-    width: 43%;
-  }
-}

@@ -44,7 +44,7 @@ export const postComment = (article_id, username, comment) => {
   return request
     .post(`articles/${article_id}/comments`, {
       body: comment,
-      author: username,
+      username,
     })
     .then(({ data }) => {
       console.log(data.comment);
