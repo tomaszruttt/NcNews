@@ -12,9 +12,11 @@ class SendComment extends Component {
     return (
       <form className="SendComment" onSubmit={this.handleSubmit}>
         <label className="SendComment-label">Write: </label>
-        <input
-          rows="5"
-          size="40"
+        <textarea
+          className="SendComment-textarea"
+          rows="3"
+          cols="50"
+          size="200"
           id="comment"
           onChange={(event) => this.setState({ comment: event.target.value })}
           value={comment}

@@ -6,6 +6,12 @@
   margin-top: 15px;
   padding-bottom: 5px;
   border-radius: 8px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.SendComment-textarea {
 }
 .SendComment-label {
   font-weight: 500;
@@ -15,6 +21,7 @@
 }
 
 .SendComment-button {
+  padding: 5px 3px 5px 3px;
   margin-left: 10px;
   font-size: 14px;
   border: none;
@@ -27,6 +34,7 @@
   text-decoration-line: none;
   cursor: pointer;
   transition: 0.5s;
+  /* margin-bottom: 5px; */
 }
 .SendComment-button:hover {
   background-color: rgb(30, 139, 241);

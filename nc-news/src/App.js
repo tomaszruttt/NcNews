@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <Title username={username} logout={this.logout} />
 
-        <body className="Body">
+        <section className="Body">
           <Navbar />
           <Router>
             <ArticlesList path="/" />
@@ -32,7 +32,7 @@ class App extends Component {
             />
             <IndividualArticle path="/articles/:article_id/comments" />
           </Router>
-        </body>
+        </section>
       </div>
     );
   }

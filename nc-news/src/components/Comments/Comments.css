@@ -15,5 +15,6 @@
   font-size: 70%;
 }
 .Comments-body {
+  word-wrap: break-word;
   font-size: 90%;
 }
