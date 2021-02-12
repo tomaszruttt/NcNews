@@ -37,3 +37,29 @@
   padding-bottom: 8px;
   margin-top: 5px;
 }
+
+@media only screen and (min-width: 780px), (min-device-width: 780px) {
+  .ArticleCard {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1080px), (min-device-width: 1080px) {
+  .ArticleCard {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1380px), (min-device-width: 1380px) {
+  .ArticleCard {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1680px), (min-device-width: 1680px) {
+  .ArticleCard {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1800px), (min-device-width: 1800px) {
+  .ArticleCard {
+    width: 43%;
+  }
+}

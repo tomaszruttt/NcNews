@@ -39,6 +39,19 @@ export const updateVotes = (id, voteChange, identifier) => {
   return request.patch(`${identifier}/${id}`, { inc_votes: voteChange });
 };
 
+export const postComment = (article_id, username, comment) => {
+  console.log(article_id, username, comment);
+  return request
+    .post(`articles/${article_id}/comments`, {
+      body: comment,
+      author: username,
+    })
+    .then(({ data }) => {
+      console.log(data.comment);
+      return data.comment;
+    });
+};
+
 // export const updateVotes = (id, voteChange, identifier) => {
 //   console.log(id, voteChange, identifier);
 //   if (identifier === "article") {
@@ -47,5 +60,3 @@ export const updateVotes = (id, voteChange, identifier) => {
 //     return request.patch(`comments/${id}`, { inc_votes: voteChange });
 //   }
 // };
-
-// comments/:comment_id

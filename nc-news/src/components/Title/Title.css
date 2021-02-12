@@ -16,3 +16,28 @@
 .Icon {
   color: rgb(63, 27, 247);
 }
+.Title-username {
+  color: rgb(63, 27, 247);
+  padding-left: 10px;
+  padding-right: 5px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.Title-user-icon {
+  margin-left: 20px;
+  padding-right: 10px;
+}
+
+.Title-button {
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(63, 27, 247);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Title-button:hover {
+  background-color: rgb(43, 20, 160);
+}

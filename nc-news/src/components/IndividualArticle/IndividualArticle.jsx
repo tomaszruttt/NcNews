@@ -4,6 +4,7 @@ import * as api from "../../api";
 import { Link } from "@reach/router";
 import Comments from "../Comments/Comments";
 import VoteUpdater from "../VoteUpdater/VoteUpdater";
+import SendComment from "../SendComment/SendComment";
 
 class IndividualArticle extends Component {
   state = {
@@ -29,11 +30,17 @@ class IndividualArticle extends Component {
       this.setState({ comments });
     });
   }
+  addComment = (newComment) => {
+    this.setState((currenState) => {
+      return { comments: [newComment, ...currenState.comments] };
+    });
+  };
 
   render() {
     const { article, comments, identifier } = this.state;
     const { votes, article_id, title, author, body } = article;
-    console.log(identifier);
+    const { username } = this.props;
+    console.log(username);
     return (
       <>
         <section className="IndividualArticle">
@@ -52,6 +59,11 @@ class IndividualArticle extends Component {
             />
           </section>
         </section>
+        <SendComment
+          username={username}
+          article_id={article_id}
+          addComment={this.addComment}
+        />
         <section className="Comments">
           <h2>Comments</h2>
 

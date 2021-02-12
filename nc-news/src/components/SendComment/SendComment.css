@@ -1,44 +1,35 @@
-.Comments {
-  background-color: #ffffff;
-  border-bottom: solid 10px #dae0e6;
-  color: rgb(92, 91, 91);
-  margin: auto;
+.SendComment {
+  background-color: white;
   width: 96%;
+  margin: auto;
+  padding-top: 5px;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  border-radius: 8px;
 }
 
-.Comments-date-author {
-  font-size: 70%;
-  padding-right: 60%;
-}
-
-.Comments-author {
-  font-size: 70%;
-}
-.Comments-body {
-  font-size: 90%;
-}
 @media only screen and (min-width: 780px), (min-device-width: 780px) {
-  .Comments {
+  .SendComment {
     width: 80%;
   }
 }
 @media only screen and (min-width: 1080px), (min-device-width: 1080px) {
-  .Comments {
+  .SendComment {
     width: 70%;
   }
 }
 @media only screen and (min-width: 1380px), (min-device-width: 1380px) {
-  .Comments {
+  .SendComment {
     width: 60%;
   }
 }
 @media only screen and (min-width: 1680px), (min-device-width: 1680px) {
-  .Comments {
+  .SendComment {
     width: 50%;
   }
 }
 @media only screen and (min-width: 1800px), (min-device-width: 1800px) {
-  .Comments {
+  .SendComment {
     width: 43%;
   }
 }
