@@ -3,8 +3,6 @@ import * as api from "../../api";
 import "./DeleteComment.css";
 
 const DeleteComment = ({ id, deleteComment }) => {
-  //   console.log(id);
-
   const handleButton = (event) => {
     const id = event.target.value;
     console.log(id);

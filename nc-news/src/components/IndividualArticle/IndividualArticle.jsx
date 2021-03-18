@@ -66,7 +66,6 @@ class IndividualArticle extends Component {
 
         <section className="IndividualArticle">
           <h2>{title}</h2>
-          {/* <p>Topic: {article.topic}</p> */}
           <p className="IndArt-author">Posted by: {author}</p>
           <p className="IndArt-body">{body}</p>
           <section className="IndArt-buttons">

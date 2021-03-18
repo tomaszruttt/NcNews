@@ -39,8 +39,6 @@ class SendComment extends Component {
     event.preventDefault();
     const { comment } = this.state;
     const { article_id, addComment, username } = this.props;
-    // const username = "weegembump";
-    // console.log(comment, article_id, username);
     if (comment.length) {
       api
         .postComment(article_id, username, comment)

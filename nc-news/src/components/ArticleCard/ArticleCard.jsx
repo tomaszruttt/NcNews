@@ -26,8 +26,6 @@ const ArticleCard = ({
         <img className="Image" src={`${cooking}`} alt={topic} />
       </section>
       <VoteUpdater votes={votes} id={article_id} identifier={identifier} />
-
-      {/* <p>Posted by {author}</p> */}
       <Link className="ArticleCard-Link" to={`/articles/${article_id}`}>
         <p className="ArticleCard-comments">{comment_count} Comments</p>
       </Link>
