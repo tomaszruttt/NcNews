@@ -29,7 +29,7 @@ class SendComment extends Component {
           Post Comment
         </button>
         {this.state.hidden && (
-          <p className="SendComment-warning">Please fill !</p>
+          <p className="SendComment-warning">Please fill</p>
         )}
       </form>
     );

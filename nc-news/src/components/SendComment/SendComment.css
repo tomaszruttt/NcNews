@@ -23,6 +23,7 @@
 .SendComment-button {
   padding: 5px 3px 5px 3px;
   margin-left: 10px;
+  margin-right: 5px;
   font-size: 14px;
   border: none;
   background-color: rgb(191, 193, 195);
@@ -43,4 +44,5 @@
   color: red;
   font-size: 14px;
   font-weight: 600;
+  /* margin-right: 5px; */
 }

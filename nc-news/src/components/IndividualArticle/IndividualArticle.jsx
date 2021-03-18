@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./IndividualArticle.css";
 import * as api from "../../api";
 import { Link } from "@reach/router";
-import Comments from "../Comments/Comments";
+import Comment from "../Comment/Comment";
 import VoteUpdater from "../VoteUpdater/VoteUpdater";
 import SendComment from "../SendComment/SendComment";
 import { SpinnerCircular } from "spinners-react";
@@ -21,6 +21,14 @@ class IndividualArticle extends Component {
     this.fetchComments(article_id);
   }
 
+  componentDidUpdate(prevProps) {
+    const { article_id } = this.props;
+    if (article_id !== prevProps.article_id) {
+      this.fetchIndividualArticle(article_id);
+      this.fetchComments(article_id);
+    }
+  }
+
   fetchIndividualArticle(article_id) {
     api.getIndividualArticle(article_id).then((article) => {
       this.setState({ article, isLoading: false });
@@ -33,8 +41,17 @@ class IndividualArticle extends Component {
     });
   }
   addComment = (newComment) => {
-    this.setState((currenState) => {
-      return { comments: [newComment, ...currenState.comments] };
+    this.setState((currentState) => {
+      return { comments: [newComment, ...currentState.comments] };
+    });
+  };
+  deleteComment = (comment_id) => {
+    this.setState((currentState) => {
+      return {
+        comments: currentState.comments.filter(
+          (comment) => comment.comment_id !== +comment_id
+        ),
+      };
     });
   };
 
@@ -72,7 +89,14 @@ class IndividualArticle extends Component {
           <h2>Comments</h2>
 
           {comments.map((comment) => {
-            return <Comments key={comments.comment_id} {...comment} />;
+            return (
+              <Comment
+                username={username}
+                deleteComment={this.deleteComment}
+                key={comments.comment_id}
+                {...comment}
+              />
+            );
           })}
         </section>
       </>

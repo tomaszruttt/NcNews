@@ -37,7 +37,7 @@ const SortArticles = ({ sortArticlesBy, sortByOrder }) => {
           key="desc"
           value="desc"
         >
-          Asc
+          Desc
         </button>
         <button
           className="SortArticles-button"
@@ -45,7 +45,7 @@ const SortArticles = ({ sortArticlesBy, sortByOrder }) => {
           key="asc"
           value="asc"
         >
-          Desc
+          Asc
         </button>
       </section>
     </section>

@@ -5,6 +5,7 @@ import Title from "./components/Title/Title";
 import ArticlesList from "./components/ArticlesList/ArticlesList";
 import { Router } from "@reach/router";
 import IndividualArticle from "./components/IndividualArticle/IndividualArticle";
+import ErrorDisplayer from "./components/ErrorDisplayer/ErrorDisplayer";
 
 class App extends Component {
   state = {
@@ -14,23 +15,32 @@ class App extends Component {
   logout = () => {
     this.setState({ username: null });
   };
+  login = () => {
+    this.setState({ username: "jessjelly" });
+  };
   render() {
     const { username } = this.state;
     return (
       <div className="App">
-        <Title username={username} logout={this.logout} />
+        <Title username={username} login={this.login} logout={this.logout} />
 
-        <section className="Body">
+        <section className="Main">
           <Navbar />
           <Router>
             <ArticlesList path="/" />
             <ArticlesList path="/articles" />
+            <ArticlesList path="/articles/topics" />
+
             <ArticlesList path="/articles/topics/:topic" />
             <IndividualArticle
               username={username}
               path="/articles/:article_id"
             />
-            <IndividualArticle path="/articles/:article_id/comments" />
+            <IndividualArticle
+              path="/articles/:article_id/comments"
+              username={this.username}
+            />
+            <ErrorDisplayer default />
           </Router>
         </section>
       </div>

@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 import "./Title.css";
 import { SquirrelIcon, PersonIcon } from "@primer/octicons-react";
 
-const Title = ({ username, logout }) => {
+const Title = ({ username, logout, login }) => {
   return (
     <header className="Title">
       <SquirrelIcon size={40} className="Icon" />
@@ -17,6 +17,16 @@ const Title = ({ username, logout }) => {
           </h4>
           <button className="Title-button" onClick={logout}>
             Logout
+          </button>
+        </>
+      )}
+      {!username && (
+        <>
+          <h4 className="Title-username">
+            <PersonIcon className="Title-user-icon" size={24} /> {username}
+          </h4>
+          <button className="Title-button" onClick={login}>
+            Login
           </button>
         </>
       )}

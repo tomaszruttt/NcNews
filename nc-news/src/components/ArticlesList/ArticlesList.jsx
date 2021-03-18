@@ -5,6 +5,7 @@ import * as api from "../../api";
 import SortArticles from "../SortArticles/SortArticles";
 // import { Spinner } from "react-awesome-spinners";
 import { SpinnerCircular } from "spinners-react";
+import ErrorDisplayer from "../ErrorDisplayer/ErrorDisplayer";
 
 class ArticlesList extends Component {
   state = {
@@ -13,6 +14,7 @@ class ArticlesList extends Component {
     identifier: "articles",
     sortBy: "created_at",
     order: "desc",
+    errMessage: "",
   };
 
   componentDidMount(props) {
@@ -36,9 +38,15 @@ class ArticlesList extends Component {
 
   fetchArticles = (topic, sortBy, order) => {
     console.log(sortBy, order);
-    api.getArticles(topic, sortBy, order).then((articles) => {
-      this.setState({ articles, isLoading: false });
-    });
+    api
+      .getArticles(topic, sortBy, order)
+      .then((articles) => {
+        this.setState({ articles, isLoading: false });
+      })
+      .catch((err) => {
+        this.setState({ errMessage: err.response.data.msg, isLoading: false });
+        console.log(err.response.data.msg);
+      });
   };
   sortArticlesBy = (query) => {
     console.log(query);
@@ -50,12 +58,13 @@ class ArticlesList extends Component {
     this.setState({ order });
   };
   render() {
-    const { articles, identifier, isLoading } = this.state;
+    const { articles, identifier, isLoading, errMessage } = this.state;
     console.log(identifier);
 
     return (
       <>
         {isLoading && <SpinnerCircular />}
+        {errMessage && <ErrorDisplayer msg={errMessage} />}
         <SortArticles
           sortArticlesBy={this.sortArticlesBy}
           sortByOrder={this.sortByOrder}

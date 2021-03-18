@@ -51,6 +51,15 @@ export const postComment = (article_id, username, comment) => {
       return data.comment;
     });
 };
+export const removeComment = (id) => {
+  console.log(id);
+  return axios
+    .delete(`https://api-tomasz-back-end.herokuapp.com/api/comments/${id}`)
+    .then((res) => {
+      console.log(res.status);
+      return res.status;
+    });
+};
 
 // export const updateVotes = (id, voteChange, identifier) => {
 //   console.log(id, voteChange, identifier);

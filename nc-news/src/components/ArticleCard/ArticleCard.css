@@ -17,6 +17,10 @@
   color: rgb(49, 48, 48);
   cursor: pointer;
   transition: 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+  width: 70%;
 }
 
 .ArticleCard-title:hover {
@@ -37,7 +41,19 @@
   padding-bottom: 8px;
   margin-top: 5px;
 }
-.img {
-  width: 200px;
-  height: 200px;
+
+.Image {
+  /* object-fit: cover; */
+  width: 150px;
+  height: 150px;
+  background-color: aquamarine;
+  margin-right: 20px;
+  border-radius: 5px;
+  /* width: 30%; */
+}
+.ArtCard-Title-Image {
+  display: flex;
+  justify-items: centre;
+  /* align-items: center; */
+  justify-content: space-between;
 }

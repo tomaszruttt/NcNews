@@ -10,31 +10,31 @@
     "navbar"
     "content"; */
 }
-.Body {
+.Main {
   margin: auto;
 }
 @media only screen and (min-width: 780px), (min-device-width: 780px) {
-  .Body {
-    width: 80%;
+  .Main {
+    width: 85%;
   }
 }
 @media only screen and (min-width: 1080px), (min-device-width: 1080px) {
-  .Body {
+  .Main {
     width: 70%;
   }
 }
 @media only screen and (min-width: 1380px), (min-device-width: 1380px) {
-  .Body {
+  .Main {
     width: 60%;
   }
 }
 @media only screen and (min-width: 1680px), (min-device-width: 1680px) {
-  .Body {
+  .Main {
     width: 50%;
   }
 }
 @media only screen and (min-width: 1800px), (min-device-width: 1800px) {
-  .Body {
+  .Main {
     width: 43%;
   }
 }

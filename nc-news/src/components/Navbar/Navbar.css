@@ -3,7 +3,7 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: rgb(255, 255, 255);
   /* background-color: rgb(208, 215, 238); */
   margin: auto;
@@ -17,25 +17,30 @@
 
   /* border: orange 4px solid; */
 }
-.Navbar-button {
+.Navbar-Link {
   /* text-decoration-line: none; */
   background-color: rgb(173, 235, 162);
   /* border-color: rgb(235, 228, 228); */
   border: none;
-  font-size: 16px;
-  padding: 5px 20px;
+  /* font-size: 16px; */
+  /* height: 80%; */
+  padding: 12px 25px;
   margin: 3px 15px 3px 15px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.5s;
-}
-.Navbar-button:hover {
-  background-color: rgb(4, 175, 13);
-}
-
-.Navbar-Link {
   text-decoration: none;
   color: black;
   font-size: 20;
   font-weight: 700;
 }
+.Navbar-Link:hover {
+  background-color: rgb(4, 175, 13);
+}
+
+/* .Navbar-Link {
+  text-decoration: none;
+  color: black;
+  font-size: 20;
+  font-weight: 700;
+} */

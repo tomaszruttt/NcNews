@@ -46,9 +46,11 @@
   color: white;
   cursor: pointer;
   transition: 0.5s;
+  font-weight: 600;
 }
 .Title-button:hover {
-  background-color: rgb(43, 20, 160);
+  background-color: rgb(146, 187, 241);
+  color: black;
 }
 .Title-link {
   text-decoration: none;
